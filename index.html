@@ -16,6 +16,9 @@
             rel="stylesheet"
         />
 
+        <!-- Favicon -->
+        <link rel="icon" type="image/ico" href="favicon.ico" />
+
         <!-- Css Styles -->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
@@ -76,7 +79,6 @@
                                             <li><a href="#">Đọc nhiều nhất</a></li>
                                             <li><a href="#">Top đánh giá</a></li>
                                             <li><a href="#">Đã hoàn thành</a></li>
-                                            <li><a href="#">Đang theo dõi</a></li>
                                             <li>
                                                 <a href="#" class="view_all">Xem tất cả</a>
                                             </li>
@@ -89,8 +91,21 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="header__right">
-                            <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                            <a href="#"><span class="icon_profile"></span></a>
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-switch"
+                                        ><span class="icon_search"></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="icon_profile"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Đăng nhập</a></li>
+                                        <li><a href="#">Đăng ký</a></li>
+                                        <li><a href="#">Quên mật khẩu</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
