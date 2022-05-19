@@ -1,7 +1,6 @@
-
-/*------------------------------
+/*----------------------------------------
 	Template default CSS
-------------------------------*/
+----------------------------------------*/
 
 html,
 body {
@@ -158,6 +157,8 @@ ol {
 	background: #e53637;
 	font-weight: 700;
 	border: none;
+	width: 100%;
+	min-height: 50px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	display: inline-block;
@@ -196,12 +197,14 @@ ol {
 		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
+
 	50% {
 		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg);
 		border: 4px solid #673ab7;
 		border-left-color: transparent;
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
@@ -216,11 +219,13 @@ ol {
 		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
+
 	50% {
 		-webkit-transform: rotate(180deg);
 		border: 4px solid #673ab7;
 		border-left-color: transparent;
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 		border: 4px solid #f44336;
@@ -330,13 +335,15 @@ ol {
 	color: #ffffff;
 }
 
-.header__menu ul li:hover .dropdown, .header__right ul li:hover .dropdown {
+.header__menu ul li:hover .dropdown,
+.header__right ul li:hover .dropdown {
 	top: 62px;
 	opacity: 1;
 	visibility: visible;
 }
 
-.header__menu ul li:hover .dropdown li a, .header__right ul li:hover .dropdown li a {
+.header__menu ul li:hover .dropdown li a,
+.header__right ul li:hover .dropdown li a {
 	background: transparent;
 }
 
@@ -344,7 +351,8 @@ ol {
 	margin-right: 0;
 }
 
-.header__menu ul li .dropdown, .header__right ul li .dropdown {
+.header__menu ul li .dropdown,
+.header__right ul li .dropdown {
 	position: absolute;
 	right: 0;
 	top: 82px;
@@ -361,12 +369,14 @@ ol {
 	transition: all, 0.3s;
 }
 
-.header__menu ul li .dropdown li, .header__right ul li .dropdown li {
+.header__menu ul li .dropdown li,
+.header__right ul li .dropdown li {
 	display: block;
 	margin-right: 0;
 }
 
-.header__menu ul li .dropdown li a, .header__right ul li .dropdown li a {
+.header__menu ul li .dropdown li a,
+.header__right ul li .dropdown li a {
 	font-size: 14px;
 	color: #111111;
 	font-weight: 500;
@@ -425,24 +435,25 @@ ol {
 .owl-prev {
 	width: 25px;
 	height: 75px;
-    position: absolute;
-    top: 23%;
-    margin-left: -30px !important;
-    display: block !important;
+	position: absolute;
+	top: 23%;
+	margin-left: -30px !important;
+	display: block !important;
 }
 
 .owl-next {
 	width: 25px;
 	height: 75px;
-    position: absolute;
-    top: 23%;
-    right: -35px;
-    display: block !important;
+	position: absolute;
+	top: 23%;
+	right: -35px;
+	display: block !important;
 }
 
-.owl-prev i, .owl-next i {
-    transform: scale(3, 6);
-    color: #fff;
+.owl-prev i,
+.owl-next i {
+	transform: scale(3, 6);
+	color: #fff;
 }
 
 /*---------------------
@@ -736,8 +747,43 @@ ol {
 	font-size: 15px;
 }
 
+/*-----------------------
+  Breadcrumb
+-----------------------*/
+
+.breadcrumb-option {
+	padding-top: 35px;
+}
+
+.breadcrumb__links a {
+	font-size: 15px;
+	color: #ffffff;
+	margin-right: 18px;
+	display: inline-block;
+	position: relative;
+}
+
+.breadcrumb__links a i {
+	margin-right: 5px;
+	color: #e53637;
+}
+
+.breadcrumb__links a:after {
+	position: absolute;
+	right: -14px;
+	top: 0;
+	content: "";
+	font-family: "FontAwesome";
+}
+
+.breadcrumb__links span {
+	font-size: 15px;
+	color: #b7b7b7;
+	display: inline-block;
+}
+
 /*---------------------
-  Normal breadcrumb
+    Normal Breadcrumb
 -----------------------*/
 
 .normal-breadcrumb {
@@ -770,14 +816,6 @@ ol {
 }
 
 /*---------------------
-  Manga details
------------------------*/
-
-/*---------------------
-  Manga reading
------------------------*/
-
-/*---------------------
   Login
 -----------------------*/
 
@@ -791,26 +829,17 @@ ol {
 	padding-left: 145px;
 }
 
-.login__form:after {
-	position: absolute;
-	right: -14px;
-	top: -40px;
-	height: 330px;
-	width: 1px;
-	background: rgba(255, 255, 255, 0.2);
-	content: "";
-}
-
 .login__form h3 {
 	color: #ffffff;
 	font-weight: 700;
+	line-height: 1.5;
 	font-family: "Oswald", sans-serif;
 	margin-bottom: 30px;
 }
 
 .login__form form .input__item {
 	position: relative;
-	width: 375px;
+	width: 100%;
 	margin-bottom: 20px;
 }
 
@@ -872,20 +901,25 @@ ol {
 	color: #ffffff;
 	display: inline-block;
 	position: absolute;
-	right: 60px;
+	right: 30px;
 	bottom: 12px;
 }
 
 .login__register {
-	padding-left: 30px;
 	display: inline-block;
 }
 
 .login__register h3 {
 	color: #ffffff;
+	text-align: justify;
 	font-weight: 700;
+	line-height: 1.5;
 	font-family: "Oswald", sans-serif;
 	margin-bottom: 30px;
+}
+
+.login__register h3:last-child {
+	margin-top: 10px;
 }
 
 .login__register p {
@@ -909,9 +943,41 @@ ol {
 	position: relative;
 }
 
+.login__mirror {
+	padding-right: 145px;
+	padding-left: 0;
+}
+
 /*---------------------
   Sign Up
 -----------------------*/
+
+.signup {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.signup .login__form h5 {
+	font-size: 15px;
+	color: #ffffff;
+	margin-top: 36px;
+}
+
+.signup .login__form h5 a {
+	color: #e53637;
+	font-weight: 700;
+}
+
+.signup-girl-pic {
+	height: 400px;
+	position: relative;
+}
+
+.signup-girl-pic2 {
+	margin-top: 15px;
+	height: 135px;
+	position: relative;
+}
 
 /*---------------------
   Footer
@@ -1001,12 +1067,20 @@ ol {
 	.hero {
 		overflow: hidden;
 	}
+
 	.login__form {
 		position: relative;
 		padding-left: 32px;
 	}
-	.blog__item__text {
-		padding: 0 50px;
+
+	.login__mirror {
+		position: relative;
+		padding-right: 32px;
+		padding-left: 0;
+	}
+
+	.signup-girl-pic2 {
+		height: 105px;
 	}
 }
 
@@ -1018,30 +1092,37 @@ ol {
 		flex: 0 0 0%;
 		max-width: 0%;
 		height: 0;
-	}	
+	}
+
 	.hero {
 		overflow: hidden;
 	}
+
 	.header {
 		position: relative;
 	}
+
 	.header .container {
 		position: relative;
 	}
+
 	.header__right {
 		position: absolute;
 		right: 120px;
 		top: -42px;
 		padding: 0;
 	}
+
 	.header__menu {
 		display: none;
 	}
+
 	.slicknav_menu {
 		background: transparent;
 		padding: 0;
 		display: block;
 	}
+
 	.slicknav_nav {
 		position: absolute;
 		right: 0;
@@ -1052,15 +1133,19 @@ ol {
 		padding: 10px 20px;
 		z-index: 9;
 	}
+
 	.dropdown {
 		margin-left: 30px !important;
 	}
+
 	.arrow_carrot-down {
 		display: none;
 	}
+
 	.slicknav_nav ul {
 		margin: 0;
 	}
+
 	.slicknav_nav .slicknav_row,
 	.slicknav_nav a {
 		padding: 7px 0;
@@ -1068,6 +1153,7 @@ ol {
 		color: #111111;
 		font-weight: 600;
 	}
+
 	.slicknav_btn {
 		border-radius: 5px;
 		background-color: #222;
@@ -1076,88 +1162,112 @@ ol {
 		right: 0;
 		top: 9px;
 	}
+
 	.slicknav_nav .slicknav_arrow {
 		color: #111111;
 	}
+
 	.slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
 		background: transparent;
 		color: #111111;
 	}
+
 	.slicknav_nav a:hover {
 		border-radius: 0;
 		background: transparent;
 		color: #111111;
 	}
+
 	.product__sidebar {
 		padding-top: 50px;
 	}
+
 	.footer__logo {
 		text-align: center;
 		margin-bottom: 20px;
 	}
+
 	.footer__nav {
 		margin-bottom: 15px;
 	}
+
 	.footer__copyright__text {
 		text-align: center;
 	}
+
 	.anime__details__widget ul li span {
 		width: 90px;
 	}
+
 	.anime__details__pic {
 		margin-bottom: 40px;
 	}
+
 	.anime__details__sidebar {
 		padding-top: 50px;
 	}
+
 	.login__form {
 		padding-left: 0;
 		margin-bottom: 90px;
 	}
-	.login__form:after {
-		display: none;
+
+	.login__mirror {
+		padding-right: 0;
 	}
+
 	.login__form form .input__item {
 		width: auto;
 	}
+
 	.login__register {
 		padding-left: 0;
 	}
-	.login__form .forget_pass {
-		right: 30px;
+
+	.signup-girl-pic2 {
+		height: 105px;
 	}
 }
 
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
-	.owl-next, .owl-prev {
+
+	.owl-next,
+	.owl-prev {
 		display: none !important;
 	}
+
 	.hero {
 		overflow: hidden;
 	}
+
 	.header {
 		position: relative;
 	}
+
 	.header .container {
 		position: relative;
 	}
+
 	.header__right {
 		position: absolute;
 		right: 120px;
 		top: -42px;
 		padding: 0;
 	}
+
 	.header__menu {
 		display: none;
 	}
+
 	.slicknav_menu {
 		background: transparent;
 		padding: 0;
 		display: block;
 	}
+
 	.slicknav_nav {
 		position: absolute;
 		right: 0;
@@ -1168,15 +1278,19 @@ ol {
 		padding: 10px 20px;
 		z-index: 9;
 	}
+
 	.dropdown {
 		margin-left: 30px !important;
 	}
+
 	.arrow_carrot-down {
 		display: none;
 	}
+
 	.slicknav_nav ul {
 		margin: 0;
 	}
+
 	.slicknav_nav .slicknav_row,
 	.slicknav_nav a {
 		padding: 7px 0;
@@ -1184,6 +1298,7 @@ ol {
 		color: #111111;
 		font-weight: 600;
 	}
+
 	.slicknav_btn {
 		border-radius: 5px;
 		background-color: #222;
@@ -1192,59 +1307,80 @@ ol {
 		right: 0;
 		top: 9px;
 	}
+
 	.slicknav_nav .slicknav_arrow {
 		color: #111111;
 	}
+
 	.slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
 		background: transparent;
 		color: #111111;
 	}
+
 	.slicknav_nav a:hover {
 		border-radius: 0;
 		background: transparent;
 		color: #111111;
 	}
+
 	.product__sidebar {
 		padding-top: 50px;
 	}
+
 	.footer__logo {
 		text-align: center;
 		margin-bottom: 20px;
 	}
+
 	.footer__nav {
 		margin-bottom: 15px;
 	}
+
 	.footer__copyright__text {
 		text-align: center;
 	}
+
+	.blog__details__title h2 {
+		font-size: 34px;
+		line-height: normal;
+	}
+
 	.btn__all {
 		text-align: left;
 	}
+
+	.product__page__title .section-title {
+		margin-bottom: 30px;
+	}
+
+	.product__page__title .product__page__filter {
+		text-align: left;
+	}
+
 	.login__form {
 		padding-left: 0;
 		margin-bottom: 90px;
 	}
-	.login__form:after {
-		display: none;
+
+	.login__mirror {
+		padding-right: 0;
 	}
+
 	.login__form form .input__item {
 		width: auto;
 	}
-	.blog__item__text {
-		padding: 0 30px;
-	}
+
 	.login__register {
 		padding-left: 0;
 	}
-	
-	.login__form .forget_pass {
-		right: 30px;
-	}
+
 	.product__sidebar__view .filter__controls li {
 		margin-right: 2px;
 	}
-	.search-model-form input, .login-model-form input {
+
+	.search-model-form input,
+	.login-model-form input {
 		width: 100%;
 	}
 }
@@ -1255,13 +1391,13 @@ ol {
 	.footer__nav ul li {
 		margin-right: 10px;
 	}
-	.login__form .forget_pass {
-		position: relative;
-		left: 0;
-		bottom: 0;
-		margin-top: 25px;
+
+	.signup-girl-pic2 {
+		display: none;
 	}
+
 	.header__right a {
 		margin-right: 10px;
 	}
+
 }
